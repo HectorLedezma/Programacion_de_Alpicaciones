@@ -9,14 +9,14 @@ public class Persona {
     String nombre;
     String apellido;
     int edad;
-    String ramo;
 
-    public Persona(String nombre, String apellido, int edad, String ramo) {
+    public Persona(String nombre, String apellido, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.ramo = ramo;
     }
-    
+    public void guardar(){
+        
+    }
     
 }
