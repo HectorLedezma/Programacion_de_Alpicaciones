@@ -1,7 +1,12 @@
 package programacion_de_aplicaciones;
+
+import java.util.Scanner;
+
 public class Programacion_de_Aplicaciones {
     public static void main(String[] args) {
-        System.out.println("XD");
+        Scanner s = new Scanner(System.in);
+        System.out.println("");
+        int op = s.nextInt();
     }
     //hola
     
