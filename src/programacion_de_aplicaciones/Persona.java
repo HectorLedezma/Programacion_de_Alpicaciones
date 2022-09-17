@@ -10,4 +10,13 @@ public class Persona {
     String apellido;
     int edad;
     String ramo;
+
+    public Persona(String nombre, String apellido, int edad, String ramo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.ramo = ramo;
+    }
+    
+    
 }

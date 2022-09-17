@@ -5,7 +5,14 @@
  */
 package programacion_de_aplicaciones;
 
-public class Estudiante {
+public class Estudiante extends Persona{
     int semestre;
+
+    public Estudiante(int semestre, String nombre, String apellido, int edad, String ramo) {
+        super(nombre, apellido, edad, ramo);
+        this.semestre = semestre;
+    }
+
+    
     
 }

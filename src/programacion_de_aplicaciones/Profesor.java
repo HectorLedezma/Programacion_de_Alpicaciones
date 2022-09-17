@@ -5,7 +5,13 @@
  */
 package programacion_de_aplicaciones;
 
-public class Profesor {
+public class Profesor extends Persona {
     String titulo;
+
+    public Profesor(String titulo, String nombre, String apellido, int edad, String ramo) {
+        super(nombre, apellido, edad, ramo);
+        this.titulo = titulo;
+    }
+
     
 }
