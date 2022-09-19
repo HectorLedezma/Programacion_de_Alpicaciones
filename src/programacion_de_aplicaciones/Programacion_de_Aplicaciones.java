@@ -1,8 +1,7 @@
 package programacion_de_aplicaciones;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+//
 public class Programacion_de_Aplicaciones {
     public static void main(String[] args) {
         boolean err = true;
