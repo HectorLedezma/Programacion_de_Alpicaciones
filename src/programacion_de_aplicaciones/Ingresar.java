@@ -1,9 +1,7 @@
 package programacion_de_aplicaciones;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-
+//
 public class Ingresar {
     Scanner s;
     Estudiante st;
@@ -40,8 +38,6 @@ public class Ingresar {
             System.out.println("Hubo un error al ingresar los datos\nPor favor, intente nuevamente");
             s = null;
             IngresaDatos();
-        }
-        
-        
+        }   
     }
 }
