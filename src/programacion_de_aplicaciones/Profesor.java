@@ -6,8 +6,8 @@ import java.util.Iterator;
 public class Profesor extends Persona {
     String titulo;
 
-    public Profesor(String titulo, String nombre, String apellido, int edad) {
-        super(nombre, apellido, edad);
+    public Profesor(String RUT,String titulo, String nombre, String apellido, int edad,int t) {
+        super(RUT,nombre, apellido, edad,t);
         this.titulo = titulo;
     }
 

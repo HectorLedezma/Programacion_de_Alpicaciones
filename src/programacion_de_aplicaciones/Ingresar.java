@@ -4,13 +4,19 @@ import java.util.Scanner;
 //
 public class Ingresar {
     Scanner s;
+    Persona per;
     Estudiante st;
     Profesor pr;
     public Ingresar() {
     }
-    public void IngresaDatos(){
+    
+    
+    
+    public Persona IngresaDatos(){
         try{
             s = new Scanner(System.in);
+            System.out.print("Ingrese el RUT: ");
+            String rut = s.nextLine();
             System.out.print("Ingrese el nombre: ");
             String nombre = s.nextLine();
             System.out.print("Ingrese el apellido: ");
@@ -20,25 +26,25 @@ public class Ingresar {
             System.out.println("Si la persona a ingresar es Estudiante, ingrese \"E\"");
             System.out.print("Si es profesor, ingrese \"P\":\n");
             String es = s.next();
-            if(es.equals("E")){
+            if(es.equals("E") || es.equals("e")){
                 System.out.println("En que ramo va el estudiante");
                 String ramo = s.next();
                 System.out.println("En que semestre va el estudiante (solo numeros)");
                 int semestre = s.nextInt();
-                st = new Estudiante(semestre,nombre,apellido,edad,ramo);
-                st.guardar();
-            }else if(es.equals("P")){
+                per = new Estudiante(rut,semestre,nombre,apellido,edad,ramo,1); 
+            }else if(es.equals("P") || es.equals("p")){
                 System.out.println("¿que titulo tiene el profesor?");
                 String titulo = s.next();
-                pr = new Profesor(titulo,nombre, apellido,edad);
-                pr.guardar();
+                per = new Profesor(rut,titulo,nombre, apellido,edad,2);
+            }else{
+                Exception ex;
             }
-            
+            per.guardar();
         }catch(InputMismatchException e){
             System.out.println("Hubo un error al ingresar los datos\nPor favor, intente nuevamente");
             s = null;
             IngresaDatos();
-        }   
-        
+        }
+        return per;
     }
 }
