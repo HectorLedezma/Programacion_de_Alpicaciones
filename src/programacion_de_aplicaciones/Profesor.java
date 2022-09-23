@@ -1,4 +1,7 @@
 package programacion_de_aplicaciones;
+
+import java.util.Iterator;
+
 //
 public class Profesor extends Persona {
     String titulo;
@@ -10,5 +13,9 @@ public class Profesor extends Persona {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public Iterator<Profesor> iterator() {
+        return null;
     }  
 }
