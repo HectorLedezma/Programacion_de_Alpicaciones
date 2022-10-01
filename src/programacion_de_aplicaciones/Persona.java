@@ -16,4 +16,12 @@ public class Persona {
     
     public void guardar(){
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public static Object iterator() {
+        return null;
+    }
 }

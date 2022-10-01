@@ -37,7 +37,6 @@ public class Ingresar {
                 String titulo = s.next();
                 per = new Profesor(rut,titulo,nombre, apellido,edad,2);
             }else{
-                Exception ex;
             }
             per.guardar();
         }catch(InputMismatchException e){

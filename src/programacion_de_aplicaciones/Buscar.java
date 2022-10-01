@@ -12,19 +12,15 @@ public class Buscar {
         System.out.print("Ingrese nombre a buscar");
         String nombre = s.nextLine();
 
-        i = c.iterator();
-        while(i.hasNext());
-            Persona e = i.next();
-            if(e.getNombre()==nombre){
+        Object i = Persona.iterator();
+        while(((Scanner) i).hasNext());
+            String e = ((Scanner) i).next();
+            if(e==nombre){
                 System.out.println(e);
-                found=true
+               found = true; 
             }
-        }
         if (!found){
-            System.out.println("No se encontró registro");
-    
+            System.out.println("No se encontro registro");
         }
-         System.out.println("-------------------------");
+    }
 }
-}
-

@@ -1,8 +1,11 @@
 package programacion_de_aplicaciones;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
 
 //
 public class Programacion_de_Aplicaciones {
@@ -19,10 +22,9 @@ public class Programacion_de_Aplicaciones {
     
     public static void main(String[] args) {
         boolean err = true;
-        Scanner s;
+        Scanner s = new Scanner(System.in);
         int op;
-        List<Persona> personas = new ArrayList<Persona>();
-        //Persona [] = new Persona[1000];
+        Collection<Persona> personas = new ArrayList<Persona>();
         int it;
         while(err){
             s = new Scanner(System.in);
@@ -37,14 +39,36 @@ public class Programacion_de_Aplicaciones {
                 if(op < 0 || op > 4){
                     System.out.println("Por favor ingresa una opcion valida");
                 }else{
-                    
                     //System.out.println(it);
                     switch(op){
                         case 0: System.exit(op);err = false;
-                        case 1: personas.add((new Ingresar()).IngresaDatos());break;
-                        case 2:break;
-                        case 3: System.out.println(personas.get(0).nombre);
-                            //(new Mostrar()).MostrarDatos();
+                                break;
+                        case 1: personas.add((new Ingresar()).IngresaDatos());
+                                break;
+                        case 2: boolean found = false;
+                                System.out.println("Ingrese nombre a buscar");
+                                String nombre = s.nextLine();
+                                Iterator<Persona> i= personas.iterator();
+                                while(i.hasNext()){
+                                    Persona e = i.next();
+                                    if(e.getNombre()== nombre){
+                                    System.out.println(e);
+                                    found =  true;
+                                }
+                            }
+                            if (!found){
+                                System.out.println("No se ha encontrado el nombre");
+                            }
+                            System.out.println("--------------------------");
+                           
+                            break;
+                        case 3:  i= personas.iterator();
+                                 while(i.hasNext()){
+                                    Persona e = i.next(); 
+                                    System.out.println(e);
+                                    
+                          
+                        }
                             break;
                      
                     }
